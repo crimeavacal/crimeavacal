@@ -15,13 +15,19 @@
             font-family: Arial, sans-serif; /* Clean font */
         }
         .container {
+            min-width: 250px;
             text-align: left; /* Center text and image */
-        }
-        img {
-            max-width: 100%; /* Responsive image */
-            height: auto; /* Maintain aspect ratio */
+            margin: 0 25px; /* X-padding (left and right) */
+            overflow: hidden; /* Hide overflow */
+            position: relative; /* Positioning context for absolute children */
             border: 5px solid #333; /* Nice border */
             border-radius: 10px; /* Optional: rounded corners */
+        }
+        img {
+            width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            object-fit: cover; /* Cover the container while maintaining aspect ratio */
+            display: block;
         }
     </style>
 </head>
